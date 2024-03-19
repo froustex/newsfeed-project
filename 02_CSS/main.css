@@ -1,7 +1,11 @@
-@import url("components_CSS/01_header.css");
 /**************************************/
 
 /* IMPORT COMPONENTS CSS*/
+
+@import url("components_CSS/01_header.css");
+@import url("components_CSS/02_section.css");
+@import url("components_CSS/03_main.css");
+@import url("components_CSS/04_footer.css");
 
 /**************************************/
 
