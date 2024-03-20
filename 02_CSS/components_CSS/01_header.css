@@ -6,13 +6,17 @@ nav{
   justify-content: space-between;
 }
 .logo {
-  padding-top: 8px;
+  padding-top: .3em;
 }
-.profil {
-  margin-left: 38rem;
-  border-radius: 50%;
+.nav_links img:first-child {
+  margin-left: 1rem;
+  border-radius: 60%;
   padding-top: 8px;
+  width: 55px;
+  height: 55px;
 }
-.nav_links{
-  padding-top: 8px;
+.nav_links img:last-child {
+  margin-right: .5em;
+  width: 45px;
+  height: 50px;
 }
