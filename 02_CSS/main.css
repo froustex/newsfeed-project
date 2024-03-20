@@ -3,9 +3,10 @@
 /* IMPORT COMPONENTS CSS*/
 
 @import url("components_CSS/01_header.css");
-@import url("components_CSS/02_section.css");
-@import url("components_CSS/03_main.css");
-@import url("components_CSS/04_footer.css");
+@import url("components_CSS/02_section_left.css");
+@import url("components_CSS/03_section_right.css");
+@import url("components_CSS/04_main.css");
+@import url("components_CSS/05_footer.css");
 
 /**************************************/
 
