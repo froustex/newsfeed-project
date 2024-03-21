@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="02_CSS/main.css" />
+    <script src="script.js"></script>
     <title>AllStars !</title>
   </head>
   <body>
@@ -13,7 +14,7 @@
           <img src="" alt="logo AllStarsLogo" />
         </div>
         <div class="nav_links">
-          <img src="" alt="profile_picture" />
+          <img id="nav_picture" src="" alt="profile_picture" />
           <img src="" alt="menu_hamburger" />
         </div>
       </nav>
@@ -21,34 +22,39 @@
     <main>
       <section class="left_section">
         <div class="upper_side">
-          <img src="" alt="profile_picture" />
-          <h2>Sam Winchester</h2>
+          
+          <input type="file" accept="image/*" id="inputFile" onchange="loadImage(event)">
+          <img class="profile_picture" src="./01_Images/AvatarHomme1.png" alt="photo_de_profil"/>
+          <label for="inputFile" class="custom-file-upload">
+            <img class="add_photo" src="./01_Images/add-photo.png"></label>
+            <h2 id="name">El Kaledo<br />Del Perù</h2>
+          
           <div class="follow_block">
-            <h3>54</h3>
-            <h3>Followers</h3>
-            <h3>20</h3>
-            <h3>Followings</h3>
+            <h3>54 Followers – 20 Follows</h3>
           </div>
+          
         </div>
+        <h2 id="my_groups">My Groups</h2>
         <div class="lower_side">
-          <h2>My Groups</h2>
           <ul>
-            <li>
-              <img src="01_Images/groupe.png" alt="" />Valence Basket Club
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="01_Images/groupe.png" alt="" /></div><h4><a href="#">Valence Basket Club</a></h4>
             </li>
-            <li><img src="01_Images/groupe.png" alt="" />Valence Rugby Club</li>
-            <li>
-              <img src="01_Images/groupe.png" alt="" />Wild Code Football Team
-            </li>
-            <li>
-              <img src="01_Images/groupe.png" alt="" />We love Cats and Dogs
-            </li>
-            <li>
-              <img src="01_Images/groupe.png" alt="" />Dogs are better than Cats
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="01_Images/groupe.png" alt="" /></div><h4><a href="#">Valence Rugby Club</a></h4>
+            </li> <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="01_Images/groupe.png" alt="" /></div><h4><a href="#">Mimi the GOAT</a></h4>
+            </li> <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="01_Images/groupe.png" alt="" /></div><h4><a href="#">San Francisco 49ers</a></h4>
             </li>
           </ul>
         </div>
       </section>
+
       <div class="central_div">
         <div class="upper_central_div">
           <div class="favoris_players"></div>

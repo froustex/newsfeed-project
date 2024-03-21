@@ -1,0 +1,86 @@
+.left_section {
+  background-color: #f5f6f7;
+  width: 15rem;
+  height: 40rem;
+  margin: 2.5rem 0 0 2rem;
+  padding-top: 1rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+#name {
+  padding-bottom: 1rem;
+}
+
+#my_groups {
+  padding-top: 1rem;
+}
+
+.lower_side {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: space-between;
+}
+
+
+ul > li {
+  list-style: none;
+  padding-top: 0.5rem;
+}
+
+.follow_block {
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px green solid;
+  border-bottom: 2px green solid;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+.profile_picture {
+    display: flex;
+    border-radius: 50%;
+    width: 12em;
+    margin: auto;
+}
+
+  #inputFile {
+    display: none;
+}
+  
+.lower_side ul {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.display_groupe {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.add_photo {
+  display: flex;
+  position: relative;
+  z-index: 6;
+  bottom: 12rem;
+  left: 1rem;
+  cursor: pointer;
+}
+
+main {
+  background-color: lightgrey;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
