@@ -47,34 +47,53 @@
     <main>
       <section class="left_section">
         <div class="upper_side">
-          <input type="file" accept="image/*" id="inputFile" onchange="loadImage(event)">
-          <img class="profile_picture" src="./01_Images/avatar.png" alt="photo_de_profil"/>
+          <input
+            type="file"
+            accept="image/*"
+            id="inputFile"
+            onchange="loadImage(event)"
+          />
+          <img
+            class="profile_picture"
+            src="./01_Images/avatar.png"
+            alt="photo_de_profil"
+          />
           <label for="inputFile" class="custom-file-upload">
-            <img class="add_photo" src="./01_Images/add-photo.png"></label>
-            <h2 id="name">El Kaledo<br />Del Perù</h2>
-          
+            <img class="add_photo" src="./01_Images/add-photo.png"
+          /></label>
+          <h2 id="name">El Kaledo<br />Del Perù</h2>
+
           <div class="follow_block">
             <h3>54 Followers – 20 Follows</h3>
           </div>
-          
         </div>
         <h2 id="my_groups">My Groups</h2>
-        </div>
+
         <div class="lower_side">
           <ul>
             <li class="display_groupe">
               <div class="picture_groupe">
-                <img src="./01_Images/groupe.png" alt="" /></div><h4><a href="#">Valence Basket Club</a></h4>
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">Valence Basket Club</a></h4>
             </li>
             <li class="display_groupe">
               <div class="picture_groupe">
-                <img src="./01_Images/groupe.png" alt="" /></div><h4><a href="#">Valence Rugby Club</a></h4>
-            </li> <li class="display_groupe">
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">Valence Rugby Club</a></h4>
+            </li>
+            <li class="display_groupe">
               <div class="picture_groupe">
-                <img src="./01_Images/groupe.png" alt="" /></div><h4><a href="#">Mimi the GOAT</a></h4>
-            </li> <li class="display_groupe">
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">Mimi the GOAT</a></h4>
+            </li>
+            <li class="display_groupe">
               <div class="picture_groupe">
-                <img src="./01_Images/groupe.png" alt="" /></div><h4><a href="#">San Francisco 49ers</a></h4>
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">San Francisco 49ers</a></h4>
             </li>
           </ul>
         </div>
@@ -89,7 +108,34 @@
         </div>
       </div>
       <div class="lower_central_div">
-        <!-- IREM CODE ARTICLE -->
+        <section class="add-new-feed">
+          <img
+            class="new-feed-img"
+            src="01_Images/gallery.png"
+            alt="add a photo"
+          />
+          <!--<input type="image" id="upload-image" name="upload-image" /> -->
+          <div class="new-feed-text">
+            <input type="text" id="title" placeholder="Title" name="title" />
+            <input type="text" id="description" name="description" />
+          </div>
+
+          <button class="share-new-feed-button">
+            <img src="01_Images/share.svg" alt="share button" />
+          </button>
+          <hr class="green-dividing-line" />
+
+          <div class="message-add-news">
+            <div class="message-add-news-buttons">
+              <button class="add-news-button">
+                <img src="01_Images/share.svg" alt="add news button" />
+              </button>
+              <button class="message-button">
+                <img src="01_Images/message.svg" alt="message" />
+              </button>
+            </div>
+          </div>
+        </section>
 
         <div>
           <button class="add-new-feed-box">
@@ -98,7 +144,11 @@
         </div>
         <div class="all-feeds">
           <section class="feed">
-            <img class="feed-avatar" src="./01_images/avatar.png" alt="avatar" />
+            <img
+              class="feed-avatar"
+              src="./01_images/avatar.png"
+              alt="avatar"
+            />
             <article class="feed-box">
               <img
                 class="feed-box-photo"
