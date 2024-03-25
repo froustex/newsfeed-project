@@ -1,9 +1,208 @@
 body {
-  background-color: #d5d5d500;
+  background-color: #f5f6f7;
+}
+main {
+  display: flex;
 }
 
-/* News Part */
+.central_div {
+  display: flex;
+  flex-direction: column;
+}
+
+.favoris_players {
+  height: 100px;
+  width: auto;
+  background-color: red;
+  margin-bottom: 20px;
+}
+
+/* News ADD POST */
+.new_posts {
+  height: 10rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.add-new-feed {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 4px 4px #dddddd;
+  height: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.img_upload {
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  margin: 10px 10px;
+  width: 120px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-feed-img {
+  width: 60px;
+}
+
+.new-feed-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+#title {
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  width: 20rem;
+  height: 25px;
+  margin: 10px 0;
+}
+
+#description {
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  width: 60rem;
+  height: 5rem;
+  padding: 5px;
+}
+
+.button_block {
+  height: 160px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-new-feed-button {
+  background-color: transparent;
+  border: none;
+  padding: 0 0 0 20px;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.green-dividing-line {
+  width: 130px;
+  height: 3px;
+  margin-right: -40px;
+  transform: rotate(90deg);
+  background-color: var(--secondary-color);
+  border: 0;
+}
+
+.message-add-news-buttons {
+  margin-right: -20px;
+  gap: 5px;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.message-button,
+.add-news-button {
+  border: none;
+  background-color: transparent;
+}
+
+/* CARROUSSEL */
+
+.carrousel {
+  padding: 20px 0px;
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 10px;
+  box-shadow: 5px 4px 4px #dddddd;
+  margin-bottom: 10px;
+}
+
+.container-carroussel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+
+h2 {
+  color: white;
+  font-size: 40px;
+  opacity: 0;
+}
+
+.cards {
+  box-shadow: 5px 4px 4px #ddd;
+  border-radius: 5px;
+  background-color: aqua;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-football {
+  background-image: url(../../01_Images/Player_Foot.jpg);
+  background-size: cover;
+  background-position-y: 0px;
+}
+
+.card-tennis {
+  background-image: url(../../01_Images/Player_Tennis.jpg);
+  background-size: cover;
+  background-position-y: 0px;
+}
+
+.card-footAmerican {
+  background-image: url(../../01_Images/Player_rugby.jpg);
+  background-size: cover;
+  background-position-y: 0px;
+}
+
+.card-basket {
+  background-image: url(../../01_Images/Player_Basket.jpg);
+  background-size: cover;
+  background-position-y: 0px;
+}
+
+.transition-card {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 120px;
+  border-radius: 0.5rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    flex: 0 0 250px;
+  }
+
+  &:hover h2 {
+    transition: opacity 0.7s ease-in;
+    opacity: 1;
+  }
+}
+
+/* END CARROUSSEL */
+
+/* News POST */
 .feed {
+  background-color: white;
   display: flex;
   margin: 10px;
 }
@@ -114,85 +313,4 @@ body {
   .green-line {
     display: none;
   }
-}
-
-/* News Part */
-
-.add-new-feed {
-  height: 10rem;
-  background-color: #f9f9f9;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  > img {
-    width: 130px;
-    height: 130px;
-    margin-right: 5px;
-  }
-}
-
-.new-feed-text {
-  display: flex;
-  flex-direction: column;
-}
-
-#title {
-  border: var(--secondary-color);
-  border-style: solid;
-  border-radius: 5px;
-  width: 15rem;
-  height: 25px;
-  padding: 5px;
-}
-
-#description {
-  border: var(--secondary-color);
-  border-style: solid;
-  border-radius: 5px;
-  width: 35rem;
-  height: 5rem;
-  margin-top: 5px;
-  padding: 5px;
-}
-
-.share-new-feed-button {
-  background-color: transparent;
-  border: none;
-  margin: 35px 0 0 20px;
-
-  img {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.message-add-news {
-  display: flex;
-  align-items: center;
-}
-
-.green-dividing-line {
-  width: 130px;
-  height: 3px;
-  margin-right: -45px;
-  transform: rotate(90deg);
-  background-color: var(--secondary-color);
-  border: 0;
-}
-
-.message-add-news-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  img {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-.message-button,
-.add-news-button {
-  border: none;
-  background-color: transparent;
 }

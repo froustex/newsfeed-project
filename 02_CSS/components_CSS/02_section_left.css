@@ -1,25 +1,31 @@
 .left_section {
-  background-color: #f5f6f7;
-  width: 15rem;
-  height: 40rem;
-  margin: 2.5rem 0 0 2rem;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 50px 50px;
+  width: auto;
+  height: 950px;
   padding-top: 1rem;
   border-radius: 20px;
   text-align: center;
 }
 
+.upper_side {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
 #name {
-  padding-bottom: 1rem;
+  padding: 20px 0;
+  font-size: 30px;
 }
 
 #my_groups {
-  padding-top: 1rem;
+  padding: 20px 0;
 }
 
 .lower_side {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   display: flex;
   align-items: center;
   text-align: start;
@@ -32,12 +38,13 @@ ul > li {
 }
 
 .follow_block {
+  color: green;
   display: flex;
   justify-content: space-around;
-  border-top: 2px green solid;
+  border-top: 2px rgb(0, 128, 0) solid;
   border-bottom: 2px green solid;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  text-align: start;
+  padding: 20px 0;
 }
 
 .profile_picture {
