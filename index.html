@@ -9,42 +9,72 @@
   <body>
     <header>
       <nav>
+        <!-- La barre de la recherche -->
         <div class="logo">
-          <img src="01_Images/AllStarsLogo.png" alt="logo AllStarsLogo" />
+          <img
+            src="./01_Images/AllStarsLogo.png"
+            alt="logo"
+            width="140px"
+            height="50px"
+          />
+          <a href="Home"></a>
         </div>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search..." />
+          <button type="button" onclick="search()">Search</button>
+        </div>
+
         <div class="nav_links">
-          <img src="01_Images/AvatarHomme1.png" alt="profile_picture" />
-          <img src="01_Images/menu.png" alt="menu_hamburger" />
+          <img id="nav_picture" src="./01_Images/avatar.png" alt="profil" />
+          <a href="Profil"></a>
+          <img
+            id="Dropdown"
+            src="./01_Images/menu.png"
+            alt="menu"
+            button
+            onclick="buttonClick()"
+            class="dropbtn"
+          />
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#Profil">Profil</a>
+            <a href="#Settings">Settings</a>
+            <a href="#Log out">Log out</a>
+            <a href="#Support">Support</a>
+          </div>
         </div>
       </nav>
     </header>
     <main>
       <section class="left_section">
         <div class="upper_side">
-          <img src="01_Images/AvatarHomme1.png" alt="profile_picture" />
-          <h2>Sam Winchester</h2>
+          <input type="file" accept="image/*" id="inputFile" onchange="loadImage(event)">
+          <img class="profile_picture" src="./01_Images/avatar.png" alt="photo_de_profil"/>
+          <label for="inputFile" class="custom-file-upload">
+            <img class="add_photo" src="./01_Images/add-photo.png"></label>
+            <h2 id="name">El Kaledo<br />Del Perù</h2>
+          
           <div class="follow_block">
-            <h3>54</h3>
-            <h3>Followers</h3>
-            <h3>20</h3>
-            <h3>Followings</h3>
+            <h3>54 Followers – 20 Follows</h3>
           </div>
+          
+        </div>
+        <h2 id="my_groups">My Groups</h2>
         </div>
         <div class="lower_side">
-          <h2>My Groups</h2>
           <ul>
-            <li>
-              <img src="01_Images/groupe.png" alt="" />Valence Basket Club
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" /></div><h4><a href="#">Valence Basket Club</a></h4>
             </li>
-            <li><img src="01_Images/groupe.png" alt="" />Valence Rugby Club</li>
-            <li>
-              <img src="01_Images/groupe.png" alt="" />Wild Code Football Team
-            </li>
-            <li>
-              <img src="01_Images/groupe.png" alt="" />We love Cats and Dogs
-            </li>
-            <li>
-              <img src="01_Images/groupe.png" alt="" />Dogs are better than Cats
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" /></div><h4><a href="#">Valence Rugby Club</a></h4>
+            </li> <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" /></div><h4><a href="#">Mimi the GOAT</a></h4>
+            </li> <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" /></div><h4><a href="#">San Francisco 49ers</a></h4>
             </li>
           </ul>
         </div>
@@ -59,6 +89,58 @@
         </div>
       </div>
       <div class="lower_central_div">
+        <!-- IREM CODE ARTICLE -->
+
+        <div>
+          <button class="add-new-feed-box">
+            Clik here To have a new feed box
+          </button>
+        </div>
+        <div class="all-feeds">
+          <section class="feed">
+            <img class="feed-avatar" src="./01_images/avatar.png" alt="avatar" />
+            <article class="feed-box">
+              <img
+                class="feed-box-photo"
+                src="./01_images/feed-box-photo-1.jpeg"
+                alt="rugby-photo"
+              />
+              <div class="feed-box-text">
+                <h3>TITLE OF THIS POST</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  ipsam quos itaque harum sint delectus recusandae, vitae qui.
+                  voluptatibus ad accusantium iste iure et excepturi explicabo.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci, fugit? Enim ipsam quos itaque harum sint delectus
+                  recusandae, vitae qui.
+                </p>
+              </div>
+              <div class="tool-box">
+                <hr class="green-line" />
+                <div class="feed-box-icons">
+                  <button class="like-icon">
+                    <svg>
+                      <path
+                        d="M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z"
+                      />
+                    </svg>
+                  </button>
+                  <img
+                    class="comment-icon"
+                    src="./01_images/comment.png"
+                    alt="comment-icon"
+                  />
+                  <img
+                    class="share-icon"
+                    src="./01_images/share.png"
+                    alt="share-icon"
+                  />
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
         <!-- IREM CODE ARTICLE -->
       </div>
       <section class="right_section"></section>
