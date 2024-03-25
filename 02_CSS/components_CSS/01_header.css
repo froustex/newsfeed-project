@@ -1,6 +1,5 @@
-<<<<<<< HEAD header {
-  header {
-    background-color: #26427e;
+header {
+  background-color: #26427e;
 }
 nav {
   display: flex;
@@ -82,5 +81,3 @@ a:hover {
   display: block;
   margin-inline: -1.5rem;
 }
-=======
->>>>>>> ac6aa453c5bf46961b901bd1fcdac2f910166b94
