@@ -1,19 +1,15 @@
 .left_section {
-  margin-top: 5px;
   border-radius: 5px;
   background-color: white;
   padding: 50px 50px;
   width: auto;
   height: 950px;
-  padding-top: 1rem;
-  border-radius: 20px;
   text-align: center;
 }
 
 .upper_side {
   width: 100%;
   height: auto;
-  margin: 20px 0;
 }
 
 #name {
