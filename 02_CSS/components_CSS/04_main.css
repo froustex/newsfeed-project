@@ -120,6 +120,8 @@ main {
   border-radius: 10px;
   box-shadow: 5px 4px 4px #dddddd;
   margin-bottom: 10px;
+  width: 70%;
+  overflow: hidden;
 }
 
 .container-carroussel {
