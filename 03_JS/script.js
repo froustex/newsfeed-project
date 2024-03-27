@@ -57,14 +57,15 @@ likeIcon.addEventListener("click", function (event) {
 /**************************************/
 // Inject favorites array //
 
-const container = document.querySelector(".favoris_players");
-container.style.width = "2630px";
+const container = document.querySelector(".container-favoris");
+const childFavorites = document.querySelector(".favoris_players");
+container.appendChild(childFavorites);
 
-container.addEventListener("mouseover", () => {
-  container.classList.remove("active");
+childFavorites.addEventListener("mouseover", () => {
+  childFavorites.classList.remove("active");
 });
-container.addEventListener("mouseleave", () => {
-  container.classList.add("active");
+childFavorites.addEventListener("mouseleave", () => {
+  childFavorites.classList.add("active");
 });
 
 const favorites = [
@@ -236,7 +237,7 @@ const favorites = [
 for (let item of favorites) {
   const cardsContainer = document.createElement("div");
   cardsContainer.classList.add("favorite-container");
-  container.appendChild(cardsContainer);
+  childFavorites.appendChild(cardsContainer);
 
   const details = document.createElement("div");
   details.classList.add("favorite-details");
@@ -282,10 +283,17 @@ favorites.unshift(newFavorite);
 const commentsButton = document.querySelector(".comment-button");
 const shareButton = document.querySelector(".share-button");
 const divMessage = document.querySelector(".interaction");
+const divShare = document.querySelector(".interaction-share");
 const mess = document.createElement("p");
+const messShare = document.createElement("p");
 
 mess.style.color = "green";
-divMessage.append(mess);
+messShare.style.color = "green";
+const containerInteract = document.querySelector(".containerInteract");
+containerInteract.appendChild(divMessage);
+containerInteract.appendChild(divShare);
+divMessage.appendChild(mess);
+divShare.appendChild(messShare);
 
 // point d'avertissement clignotant + transition message de confirmation + vue message d'intéraction //
 
@@ -293,7 +301,7 @@ const signal = document.querySelectorAll(".signalPoint");
 
 commentsButton.addEventListener("click", () => {
   divMessage.classList.toggle("showInteraction");
-  mess.innerHTML = "votre commentaire a été enregistré";
+  mess.innerHTML = "Votre commentaire a été enregistré";
   const clignote = setInterval(() => {
     signal[6].classList.toggle("signalView");
   }, 500);
@@ -306,15 +314,15 @@ commentsButton.addEventListener("click", () => {
 });
 
 shareButton.addEventListener("click", () => {
-  divMessage.classList.toggle("showInteraction");
-  mess.innerHTML = "Vous venez de partager le post";
+  divShare.classList.toggle("showInteraction");
+  messShare.innerHTML = "Vous venez de partager le post";
   const clignote = setInterval(() => {
-    signal[8].classList.toggle("signalView");
+    signal[2].classList.toggle("signalView");
   }, 500);
-  signal[8].addEventListener("click", () => {
-    divMessage.classList.toggle("showInteraction");
-    mess.innerHTML = "Irem vient de partager votre post";
+  signal[2].addEventListener("click", () => {
+    divShare.classList.toggle("showInteraction");
+    messShare.innerHTML = "Irem vient de partager votre post";
     clearInterval(clignote);
-    signal[8].classList.remove("signalView");
+    signal[2].classList.remove("signalView");
   });
 });

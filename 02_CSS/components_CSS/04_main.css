@@ -10,12 +10,6 @@ main {
   flex-direction: column;
 }
 
-.favoris_players {
-  height: 100px;
-  width: auto;
-  background-color: red;
-  margin-bottom: 20px;
-}
 
 /* News ADD POST */
 .new_posts {
@@ -318,14 +312,21 @@ h2 {
 
 /*CSS favoris_players */
 
+.container-favoris {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  overflow: hidden;
+  z-index: 1;
+  background-color: white;
+}
+ 
 .favoris_players {
   display: flex;
   align-items: center;
   height: 110px;
   gap: 30px;
-  width: 60%;
-  background-color: #f5f6f7;
-  overflow: hidden;
+  width: 100%;
 }
 
 .favorite-container {
@@ -383,15 +384,15 @@ img.favorite-img {
       transform: translateX(0%)
   }
   to {
-      transform: translateX(-40%);
+      transform: translateX(-25%);
   }
 }
 
 .active {
-  background-color: #f5f6f7;
+  background-color: white;
   animation-name: slide;
-  animation-duration: 50s;
-  animation-iteration-count: 3; 
+  animation-duration: 25s;
+  animation-iteration-count: infinite; 
   animation-direction: alternate; 
   animation-timing-function: linear;
 }
@@ -416,6 +417,10 @@ img.favorite-img {
   font-size: 2em;
 } 
   
+.interaction-share {
+  font-size: 2em;
+  opacity: 0;
+}
 
 .showInteraction {
   display: block;
@@ -452,7 +457,7 @@ img.profile_picture {
 
 .new_posts {
   width: 100%;
-  justify-content: center;
+  justify-self: center;
 }
 
 .add_new_feed {
@@ -471,8 +476,15 @@ input#description {
   width: 100%;
 }
 
-/*.upper_central_div {
+.upper_central_div {
   display: flex;
   flex-direction: column;
   align-items: center;
-}*/
+}
+
+.containerInteract {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  justify-content: center;
+}
