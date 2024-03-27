@@ -321,12 +321,14 @@ h2 {
   overflow: hidden;
   z-index: 1;
   background-color: white;
+  height: 150px;
+  box-shadow: 5px 4px 4px #dddddd;
+  border-radius: 10px;
 }
  
 .favoris_players {
   display: flex;
   align-items: center;
-  height: 110px;
   gap: 30px;
   width: 100%;
 }
