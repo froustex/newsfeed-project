@@ -314,3 +314,165 @@ h2 {
     display: none;
   }
 }
+
+
+/*CSS favoris_players */
+
+.favoris_players {
+  display: flex;
+  align-items: center;
+  height: 110px;
+  gap: 30px;
+  width: 60%;
+  background-color: #f5f6f7;
+  overflow: hidden;
+}
+
+.favorite-container {
+  display: flex; 
+  margin: 0.4rem;  
+}
+
+.favorite-details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.favorite-name{
+  display: none;
+  text-align: center;
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+.favorite-details:hover {
+  .favorite-name {
+     display: block;
+ }
+}  
+
+img.favorite-img {
+  border: solid 1px red;
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.signalPoint {
+  position: absolute;
+  border: 5px solid red;
+  border-radius: 50%;
+  left: 40px;
+  top: -10px;
+  cursor: pointer;
+}
+
+.signalView {
+  position: absolute;
+  border: 5px solid green;
+  border-radius: 50%;
+  left: 40px;
+  top: -10px;
+  cursor: pointer;
+}
+
+@keyframes slide {
+  from {
+      transform: translateX(0%)
+  }
+  to {
+      transform: translateX(-40%);
+  }
+}
+
+.active {
+  background-color: #f5f6f7;
+  animation-name: slide;
+  animation-duration: 50s;
+  animation-iteration-count: 3; 
+  animation-direction: alternate; 
+  animation-timing-function: linear;
+}
+
+@keyframes trans {
+  0% {
+      opacity: 0;
+      display: none;
+  }
+  50% {
+      opacity: 1;
+      display: block;
+  }
+  100% {
+      opacity: 0;
+      display: none;
+  }
+}
+
+.interaction {
+  opacity: 0;
+  font-size: 2em;
+} 
+  
+
+.showInteraction {
+  display: block;
+  animation: trans 4s;
+}
+
+.comments {
+  cursor: pointer;
+  background-color: blue;
+  width: 250px;
+  height: 30px;
+}
+
+/*changement du 26/03 stef */
+
+.left_section {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+img.profile_picture {
+  height: auto;
+}
+
+.central_div {
+  overflow: hidden;
+}
+
+.upper_central {
+  display: flex;
+  flex-direction: column;
+}
+
+.new_posts {
+  width: 100%;
+  justify-content: center;
+}
+
+.add_new_feed {
+  width: 100%;
+}
+
+.new-feed-text {
+  width: 100%;
+}
+
+input#title {
+  width: 40%;
+}
+
+input#description {
+  width: 100%;
+}
+
+/*.upper_central_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}*/
