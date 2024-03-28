@@ -1,0 +1,102 @@
+/**************************************/
+
+/* IMPORT COMPONENTS CSS*/
+
+@import url("components_CSS/01_header.css");
+@import url("components_CSS/02_section_left.css");
+@import url("components_CSS/03_section_right.css");
+@import url("components_CSS/04_main.css");
+@import url("components_CSS/05_footer.css");
+
+/**************************************/
+
+/* GLOBAL RESET CSS*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/**************************************/
+
+/* COLORS */
+
+:root {
+  --primary-color: #273e70;
+  --secondary-color: #00b268;
+}
+
+.upper_side2{
+  display: none;
+}
+
+
+
+@media screen and (max-width:1000px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .left_section{
+    z-index: 1;
+    display: flex;
+    height: 15rem;
+    justify-content: center;
+  }
+  .profile_picture{
+    width: 7rem;
+    margin: 0;
+  }
+  #name {
+    display: none;
+  }
+  #name_responsive{
+    display: flex;
+  }
+  .profile_responsive{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .follow_block{
+    padding: 0;
+    border: none;
+    width: 5rem;
+    display: flex;
+    }
+  #follow{
+    display: flex;
+    flex-direction: row;
+  }
+  .follow-ers{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-top: 1rem;
+  }
+  .add_photo{
+    display: flex;
+    position: relative;
+    z-index: 6;
+    top: 5rem;
+    left: -1rem;
+    cursor: pointer;
+  }
+  }
+
+  @media screen and (max-width:670px) {
+  .search-container{
+    display: none;
+  }
+  #nav_picture{
+    display: none;
+  }
+  .add-new-feed{
+    display: none;
+  }
+  .new_posts{
+    display: none;
+  }
+  
+  }

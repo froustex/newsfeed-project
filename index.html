@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="02_CSS/main.css" />
+    <title>AllStars !</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="./01_Images/AllStarsLogo.png"
+            alt="logo"
+            width="140px"
+            height="50px"
+          />
+          <a href="Home"></a>
+        </div>
+        <!-- La barre de la recherche -->
+
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search..." />
+          <button type="button" onclick="search()">Search</button>
+        </div>
+        <!-- fin barre de recherche -->
+        <div class="nav_links">
+          <img id="nav_picture" src="./01_Images/avatar.png" alt="profil" />
+          <a href="Profil"></a>
+          <img
+            id="Dropdown"
+            src="./01_Images/menu.png"
+            alt="menu"
+            button
+            onclick="buttonClick()"
+            class="dropbtn"
+          />
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#Profil">Profil</a>
+            <a href="#Settings">Settings</a>
+            <a href="#Log out">Log out</a>
+            <a href="#Support">Support</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="left_section">
+        <div class="upper_side">
+          <input
+            type="file"
+            accept="image/*"
+            id="inputFile"
+            onchange="loadImage(event)"
+          />
+          <div class="profile_responsive">
+            <img
+              class="profile_picture"
+              src="./01_Images/avatar.png"
+              alt="photo_de_profil"
+            />
+            <label for="inputFile" class="custom-file-upload">
+              <img class="add_photo" src="./01_Images/add-photo.png"
+            /></label>
+            <h3 id="name">El Kaledo <br />Del Perù</h3>
+            <div class="identity">
+              <h3 id="name_responsive">El Kaled Del Perù</h3>
+
+              <div class="follow_block">
+                <h3 class="follow-ers">
+                  <span id="followers">54 Followers</span
+                  ><span id="follows">20 Follows</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lower_side">
+          <h3 id="my_groups">My Groups</h3>
+          <ul>
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">Valence Basket Club</a></h4>
+            </li>
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">Valence Rugby Club</a></h4>
+            </li>
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">Mimi the GOAT</a></h4>
+            </li>
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">San Francisco 49ers</a></h4>
+            </li>
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">Lakers Fan Club</a></h4>
+            </li>
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">Green Mascotte Club</a></h4>
+            </li>
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">Eros : King of the Kings</a></h4>
+            </li>
+            <li class="display_groupe">
+              <div class="picture_groupe">
+                <img src="./01_Images/groupe.png" alt="" />
+              </div>
+              <h4><a href="#">Godzilla Fan Club</a></h4>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="central_div">
+        <div class="upper_central_div">
+          <div class="container-favoris">
+            <div class="favoris_players"></div>
+          </div>
+          <div class="containerInteract">
+            <div class="interaction"></div>
+            <div class="interaction-share"></div>
+          </div>
+          <div class="new_posts">
+            <section class="add-new-feed">
+              <div class="feed-box-photo">
+                <input
+                  class="newAddPhoto"
+                  type="file"
+                  id="imgUpload"
+                  accept="image/png, image/jpeg"
+                  value=""
+                />
+                <label for="imgUpload" class="custom-file-upload">
+                  <img class="new-feed-img" src="./01_Images/gallery.png"
+                /></label>
+              </div>
+              <!--<input type="image" id="upload-image" name="upload-image" /> -->
+
+              <div class="new-feed-text">
+                <input
+                  type="text"
+                  id="title"
+                  placeholder="Title"
+                  name="title"
+                  value=""
+                />
+                <textarea
+                  style="resize: none"
+                  type="text"
+                  id="description"
+                  name="description"
+                  value=""
+                  cols="13"
+                  rows="5"
+                ></textarea>
+              </div>
+              <div class="button_block">
+                <button class="share-new-feed-button">
+                  <img src="01_Images/share.svg" alt="share button" />
+                </button>
+
+                <hr class="green-dividing-line" />
+
+                <div class="message-add-news">
+                  <div class="message-add-news-buttons">
+                    <button class="add-news-button">
+                      <img src="01_Images/share.svg" alt="add news button" />
+                    </button>
+                    <button class="message-button">
+                      <img src="01_Images/message.svg" alt="message" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="carrousel">
+            <div class="container-carroussel">
+              <div class="cards card-football transition-card">
+                <h2>FootBall</h2>
+              </div>
+              <div class="cards card-tennis transition-card">
+                <h2>Basket</h2>
+              </div>
+              <div class="cards card-footAmerican transition-card">
+                <h2>US Football</h2>
+              </div>
+              <div class="cards card-basket transition-card">
+                <h2>Tennis</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lower_central_div">
+          <div>
+            <button class="add-new-feed-box">
+              Clik here To have a new feed box
+            </button>
+          </div>
+          <div class="all-feeds">
+            <section class="feed">
+              <img
+                class="feed-avatar"
+                src="./01_images/avatar.png"
+                alt="avatar"
+              />
+              <article class="feed-box">
+                <img
+                  class="feed-box-photo"
+                  src="./01_images/feed-box-photo-1.jpeg"
+                  alt="rugby-photo"
+                />
+                <div class="feed-box-text">
+                  <h3>TITLE OF THIS POST</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Enim ipsam quos itaque harum sint delectus recusandae, vitae
+                    qui. voluptatibus ad accusantium iste iure et excepturi
+                    explicabo. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Adipisci, fugit? Enim ipsam quos itaque
+                    harum sint delectus recusandae, vitae qui.
+                  </p>
+                </div>
+                <div class="tool-box">
+                  <hr class="green-line" />
+                  <div class="feed-box-icons">
+                    <button class="like-icon">
+                      <svg width="25" height="25">
+                        <path
+                          d="M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z"
+                        />
+                      </svg>
+                    </button>
+                    <button class="comment-button">
+                      <img
+                        class="comment-icon"
+                        src="./01_images/comment.png"
+                        alt="comment-icon"
+                      />
+                    </button>
+                    <button class="share-button">
+                      <img
+                        class="share-icon"
+                        src="./01_images/share.png"
+                        alt="share-icon"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+          <!-- IREM CODE ARTICLE -->
+        </div>
+      </div>
+      <section class="right_section"></section>
+    </main>
+    <footer>
+      <div class="copyright">&copy; Copyright</div>
+    </footer>
+  </body>
+  <script src="03_JS/script.js"></script>
+</html>
