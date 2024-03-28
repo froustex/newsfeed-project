@@ -8,6 +8,11 @@ main {
 .central_div {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+button.add-new-feed-box {
+  display: none;
 }
 
 
@@ -205,6 +210,8 @@ h2 {
   background-color: white;
   display: flex;
   margin: 10px;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .feed-avatar {
@@ -480,7 +487,7 @@ input#title {
   width: 40%;
 }
 
-input#description {
+textarea#description {
   width: 100%;
 }
 
@@ -500,3 +507,8 @@ input#description {
 .newAddPhoto {
   display: none;
 }
+
+.lower_central_div {
+  width: 100%;
+}
+

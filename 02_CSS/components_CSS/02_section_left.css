@@ -5,6 +5,7 @@
   width: auto;
   height: 950px;
   text-align: center;
+  display: flex;
 }
 
 .upper_side {
@@ -18,14 +19,20 @@
 }
 
 #my_groups {
-  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  
 }
 
 .lower_side {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
   align-items: center;
   text-align: start;
   justify-content: space-between;
+  
 }
 
 ul > li {
@@ -46,8 +53,10 @@ ul > li {
 .profile_picture {
   display: flex;
   border-radius: 50%;
-  width: 12em;
+  width: 12rem;
+  height: 12rem;
   margin: auto;
+  object-fit: cover;
 }
 
 #inputFile {
@@ -71,12 +80,16 @@ ul > li {
   display: flex;
   position: relative;
   z-index: 6;
-  bottom: 12rem;
-  left: 1rem;
+  bottom: 1rem;
+  left: 10rem;
   cursor: pointer;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+#name_responsive {
+  display: none;
 }

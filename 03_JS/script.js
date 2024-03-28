@@ -23,16 +23,46 @@ function search() {
   console.log("Search Value:", searchValue);
 }
 /**************************************/
-// Modifier pohoto de profil
+//  Modifier pohoto de profil //
 
 function loadImage(event) {
   const input = event.target;
   if (input.files && input.files[0]) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      const image = document.querySelector(".profile_picture");
-      document.querySelector("#nav_picture").src = event.target.result;
+      const image = new Image();
       image.src = e.target.result;
+      image.onload = function () {
+        const maxSize = 500; // Taille maximale souhaitée pour la largeur et la hauteur
+        const canvas = document.createElement("canvas");
+        canvas.width = maxSize;
+        canvas.height = maxSize;
+        const ctx = canvas.getContext("2d");
+        // Calcul des dimensions de redimensionnement en conservant les proportions
+        let newWidth, newHeight;
+        if (image.width > image.height) {
+          newWidth = maxSize;
+          newHeight = (image.height / image.width) * maxSize;
+        } else {
+          newHeight = maxSize;
+          newWidth = (image.width / image.height) * maxSize;
+        }
+        // Dessiner l'image redimensionnée centrée sur le canevas
+        const xOffset = (maxSize - newWidth) / 2;
+        const yOffset = (maxSize - newHeight) / 2;
+        ctx.drawImage(image, xOffset, yOffset, newWidth, newHeight);
+        // Convertir le canevas en format base64
+        const resizedDataUrl = canvas.toDataURL("image/jpeg", 0.7); // Format d'image et qualité (0.7 ici)
+        // Mettre à jour l'image
+        const profilePicture = document.querySelector(".profile_picture");
+        const navPicture = document.querySelector("#nav_picture");
+        if (profilePicture) {
+          profilePicture.src = resizedDataUrl;
+        }
+        if (navPicture) {
+          navPicture.src = resizedDataUrl;
+        }
+      };
     };
     reader.readAsDataURL(input.files[0]);
   }
@@ -369,3 +399,33 @@ input.addEventListener("change", () => {
   };
   reader.readAsDataURL(input.files[0]);
 });
+
+// Fonction pour supprimer la div lower_side
+function removeLeftSection() {
+  const lowerSide = document.querySelector(".lower_side");
+  if (lowerSide) {
+    lowerSide.remove();
+  }
+}
+// Fonction pour restaurer la div lower_side
+function restoreLeftSection() {
+  const body = document.querySelector("body");
+  const leftSection = document.createElement("section");
+  leftSection.className = "lower_side";
+  body.appendChild(leftSection);
+  // Vous pouvez ajouter le contenu de la section ici si nécessaire
+}
+// Vérifie la taille de l'écran et supprime ou restaure la section lower_side en conséquence
+function checkScreenWidth(mediaQuery) {
+  if (mediaQuery.matches) {
+    removeLeftSection();
+  } else {
+    restoreLeftSection();
+  }
+}
+// Définit la media query à une largeur maximale de 1000px
+const mediaQuery = window.matchMedia("(max-width: 1000px)");
+// Vérifie initialement la taille de l'écran
+checkScreenWidth(mediaQuery);
+// Ajoute un écouteur d'événements pour vérifier les changements de taille d'écran
+mediaQuery.addEventListener("change", checkScreenWidth);
