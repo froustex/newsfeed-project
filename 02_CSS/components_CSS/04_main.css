@@ -44,7 +44,11 @@ main {
 }
 
 .new-feed-img {
-  width: 60px;
+  width: 130px;
+}
+
+.img_upload > label{
+  width: 120px;
 }
 
 .new-feed-text {
@@ -321,12 +325,14 @@ h2 {
   overflow: hidden;
   z-index: 1;
   background-color: white;
+  height: 150px;
+  box-shadow: 5px 4px 4px #dddddd;
+  border-radius: 10px;
 }
  
 .favoris_players {
   display: flex;
   align-items: center;
-  height: 110px;
   gap: 30px;
   width: 100%;
 }
@@ -367,8 +373,8 @@ img.favorite-img {
   position: absolute;
   border: 5px solid red;
   border-radius: 50%;
-  left: 40px;
-  top: -10px;
+  left: 55px;
+  top: 10px;
   cursor: pointer;
 }
 
@@ -376,8 +382,8 @@ img.favorite-img {
   position: absolute;
   border: 5px solid green;
   border-radius: 50%;
-  left: 40px;
-  top: -10px;
+  left: 55px;
+  top: 10px;
   cursor: pointer;
 }
 
@@ -489,4 +495,8 @@ input#description {
   flex-direction: column;
   height: 80px;
   justify-content: center;
+}
+
+.newAddPhoto {
+  display: none;
 }

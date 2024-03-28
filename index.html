@@ -136,12 +136,17 @@
           </div>
           <div class="new_posts">
             <section class="add-new-feed">
-              <div class="img_upload">
-                <img
-                  class="new-feed-img"
-                  src="01_Images/gallery.png"
-                  alt="add a photo"
+              <div class="feed-box-photo">
+                <input
+                  class="newAddPhoto"
+                  type="file"
+                  id="imgUpload"
+                  accept="image/png, image/jpeg"
+                  value=""
                 />
+                <label for="imgUpload" class="custom-file-upload">
+                  <img class="new-feed-img" src="./01_Images/gallery.png"
+                /></label>
               </div>
 
               <!--<input type="image" id="upload-image" name="upload-image" /> -->
@@ -152,8 +157,14 @@
                   id="title"
                   placeholder="Title"
                   name="title"
+                  value=""
                 />
-                <input type="text" id="description" name="description" />
+                <input
+                  type="text"
+                  id="description"
+                  name="description"
+                  value=""
+                />
               </div>
               <div class="button_block">
                 <button class="share-new-feed-button">

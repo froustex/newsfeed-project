@@ -268,15 +268,45 @@ favorites.unshift(newFavorite);
 /**************************************/
 // Add dynamic posts //
 
-/*form.onsubmit = (event) => {
-  event.preventDefault();
-  const test = document.querySelector(".test");
-  const paraf = document.createElement("p");
-  paraf.innerText = `${postTitle.value}`;
-  test.append(paraf);
+const newFeedImg = document.querySelector(".img_upload");
+const newFeedTitle = document.querySelector("#title");
+const newFeedDescription = document.querySelector("#description");
+const buttonAddNewFeed = document.querySelector(".share-new-feed-button");
 
-  postTitle.value = "";
-};*/
+const allFeeds = document.querySelector(".all-feeds");
+
+buttonAddNewFeed.addEventListener("click", () => {
+  const section = document.createElement("section");
+  section.classList.add("feed");
+
+  allFeeds.prepend(section);
+  const feedAvatar = document.createElement("img");
+  feedAvatar.classList.add("feed-avatar");
+  feedAvatar.src = "./01_images/avatar.png";
+  section.appendChild(feedAvatar);
+  const feedBox = document.createElement("article");
+  feedBox.classList.add("feed-box");
+  section.appendChild(feedBox);
+  const feedBoxPhoto = document.createElement("img");
+  feedBoxPhoto.classList.add(".feed-box-photo");
+  feedBoxPhoto.src = `${previewImg.src}`;
+  feedBoxPhoto.style.maxWidth = "200px";
+  feedBoxPhoto.style.maxHeight = "200px";
+  feedBox.appendChild(feedBoxPhoto);
+  const feedBoxText = document.createElement("div");
+  feedBoxText.classList.add("feed-box-text");
+  const titleFeed = document.createElement("h3");
+  titleFeed.innerText = `${newFeedTitle.value}`;
+  const feedParaf = document.createElement("p");
+  feedParaf.innerText = `${newFeedDescription.value}`;
+  feedBoxText.appendChild(titleFeed);
+  feedBoxText.appendChild(feedParaf);
+  feedBox.appendChild(feedBoxText);
+  const toolBox = document.querySelector(".tool-box");
+  const cloneToolBox = toolBox.cloneNode(true);
+  feedBox.appendChild(cloneToolBox);
+  previewImg.src = "./01_Images/gallery.png";
+});
 
 // gestion messages de confirmation intéraction boutons //
 
@@ -303,13 +333,13 @@ commentsButton.addEventListener("click", () => {
   divMessage.classList.toggle("showInteraction");
   mess.innerHTML = "Votre commentaire a été enregistré";
   const clignote = setInterval(() => {
-    signal[6].classList.toggle("signalView");
+    signal[3].classList.toggle("signalView");
   }, 500);
-  signal[6].addEventListener("click", () => {
+  signal[3].addEventListener("click", () => {
     divMessage.classList.toggle("showInteraction");
     mess.innerHTML = "Marvin a commenté votre post";
     clearInterval(clignote);
-    signal[6].classList.remove("signalView");
+    signal[3].classList.remove("signalView");
   });
 });
 
@@ -317,12 +347,25 @@ shareButton.addEventListener("click", () => {
   divShare.classList.toggle("showInteraction");
   messShare.innerHTML = "Vous venez de partager le post";
   const clignote = setInterval(() => {
-    signal[2].classList.toggle("signalView");
+    signal[5].classList.toggle("signalView");
   }, 500);
-  signal[2].addEventListener("click", () => {
+  signal[5].addEventListener("click", () => {
     divShare.classList.toggle("showInteraction");
     messShare.innerHTML = "Irem vient de partager votre post";
     clearInterval(clignote);
-    signal[2].classList.remove("signalView");
+    signal[5].classList.remove("signalView");
   });
+});
+
+/* Façon d'upload le preview et afficher l'image */
+
+const input = document.querySelector("#imgUpload");
+const previewImg = document.querySelector(".new-feed-img");
+
+input.addEventListener("change", () => {
+  const reader = new FileReader();
+  reader.onload = () => {
+    previewImg.src = reader.result;
+  };
+  reader.readAsDataURL(input.files[0]);
 });
